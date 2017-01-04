@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace mouse_capability_extender
+namespace target_clicker
 {
     /// <summary>
     /// App.xaml の相互作用ロジック

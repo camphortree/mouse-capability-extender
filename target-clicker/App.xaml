@@ -1,7 +1,7 @@
-﻿<Application x:Class="mouse_capability_extender.App"
+﻿<Application x:Class="target_clicker.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:mouse_capability_extender"
+             xmlns:local="clr-namespace:target_clicker"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

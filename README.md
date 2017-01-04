@@ -1,5 +1,5 @@
-# [WIP]mouse capability extender
-Mouse capability extender for Windows.
+# [WIP] Target Clicker
+Target Clicker for Windows.
 This program is under work in progress and does not work at this time.
 
 ## Functions

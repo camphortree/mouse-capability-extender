@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace mouse_capability_extender
+namespace target_clicker
 {
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック

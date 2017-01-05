@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using WindowsInput;
+using NHotkey;
+using NHotkey.Wpf;
 
 namespace TargetClicker
 {
@@ -25,9 +27,17 @@ namespace TargetClicker
         public MainWindow()
         {
             InitializeComponent();
+            HotkeyManager.Current.AddOrReplace("clickTarget", Key.D1 , ModifierKeys.Control | ModifierKeys.Alt, clickTarget);
         }
 
         private void clickButtonClick(object sender, RoutedEventArgs e)
+        {
+            var sim = new InputSimulator();
+            sim.Mouse.MoveMouseTo(0, 0);
+            sim.Mouse.RightButtonClick();
+        }
+
+        private void clickTarget(object sender, HotkeyEventArgs e)
         {
             var sim = new InputSimulator();
             sim.Mouse.MoveMouseTo(0, 0);

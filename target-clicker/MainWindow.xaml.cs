@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WindowsInput;
+
 namespace TargetClicker
 {
     /// <summary>
@@ -23,6 +25,13 @@ namespace TargetClicker
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void clickButtonClick(object sender, RoutedEventArgs e)
+        {
+            var sim = new InputSimulator();
+            sim.Mouse.MoveMouseTo(0, 0);
+            sim.Mouse.RightButtonClick();
         }
     }
 }

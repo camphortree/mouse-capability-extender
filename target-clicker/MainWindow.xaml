@@ -4,10 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TargetClicker"
+        xmlns:prop="clr-namespace:TargetClicker.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <Button x:Name="clickButton" Content="Click" HorizontalAlignment="Left" Margin="27,30,0,0" VerticalAlignment="Top" Width="75" Click="clickButtonClick" Cursor=""/>
+        Title="Target Clicker" Height="350" Width="525">
 
+    <Grid Height="319" VerticalAlignment="Top">
+        <StackPanel VerticalAlignment="Top">
+            <Menu>
+                <MenuItem Header="{x:Static prop:Resources.Menu_File}" />
+                <MenuItem Header="{x:Static prop:Resources.Menu_Option}">
+                    <MenuItem IsCheckable="True" Header="Option1(_1)" />
+                    <MenuItem IsCheckable="True" Header="Option2(_2)" />
+                    <MenuItem IsCheckable="True" Header="Option3(_3)" />
+                </MenuItem>
+
+            </Menu>
+        </StackPanel>
+        <ListView x:Name="listView" ItemsSource="{Binding}" Margin="0,18,0,0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="NameColumn" Header="{x:Static prop:Resources.Label_Name}" DisplayMemberBinding="{Binding StrName}" Width="100"/>
+                    <GridViewColumn x:Name="ShortCutKeysColumn" Header="{x:Static prop:Resources.Label_ShortCutKeys}" DisplayMemberBinding="{Binding StrShortCutKeys}" Width="200"/>
+                    <GridViewColumn x:Name="MouseEventColumn" Header="{x:Static prop:Resources.Label_MouseEvent}" DisplayMemberBinding="{Binding StrMouseEvent}" Width="100"/>
+                    <GridViewColumn x:Name="CordinateColumn" Header="{x:Static prop:Resources.Label_Cordinate}" DisplayMemberBinding="{Binding StrCordinate}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

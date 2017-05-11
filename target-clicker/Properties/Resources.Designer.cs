@@ -22,7 +22,7 @@ namespace TargetClicker.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace TargetClicker.Properties {
         ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TargetClicker.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("target_clicker.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,12 +51,66 @@ namespace TargetClicker.Properties {
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Cordinate に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Label_Cordinate {
+            get {
+                return ResourceManager.GetString("Label_Cordinate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Mouse Event に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Label_MouseEvent {
+            get {
+                return ResourceManager.GetString("Label_MouseEvent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Name に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Label_Name {
+            get {
+                return ResourceManager.GetString("Label_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Short Cut Keys に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Label_ShortCutKeys {
+            get {
+                return ResourceManager.GetString("Label_ShortCutKeys", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   File(_F) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_File {
+            get {
+                return ResourceManager.GetString("Menu_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Option(_O) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string Menu_Option {
+            get {
+                return ResourceManager.GetString("Menu_Option", resourceCulture);
             }
         }
     }

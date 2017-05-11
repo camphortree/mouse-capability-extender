@@ -12,10 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 using WindowsInput;
 using NHotkey;
 using NHotkey.Wpf;
+
 
 namespace TargetClicker
 {
@@ -27,14 +29,19 @@ namespace TargetClicker
         public MainWindow()
         {
             InitializeComponent();
-            HotkeyManager.Current.AddOrReplace("clickTarget", Key.D1 , ModifierKeys.Control | ModifierKeys.Alt, clickTarget);
-        }
 
-        private void clickButtonClick(object sender, RoutedEventArgs e)
-        {
-            var sim = new InputSimulator();
-            sim.Mouse.MoveMouseTo(0, 0);
-            sim.Mouse.RightButtonClick();
+            ObservableCollection<Target> list;
+
+            list = new ObservableCollection<Target>();
+            list.Add(new Target { StrName = "RightButtom", StrShortCutKeys = "CTRL+ALT+1", StrMouseEvent = "RIGHTCLICK", StrCordinate = "65535,65535" });
+            list.Add(new Target { StrName = "LeftTop", StrShortCutKeys = "CTRL+ALT+2", StrMouseEvent = "RIGHTCLICK", StrCordinate = "0,0" });
+            listView.DataContext = list;
+
+            foreach (var t in list)
+            {
+                t.RegistHotKey();
+
+            }
         }
 
         private void clickTarget(object sender, HotkeyEventArgs e)
